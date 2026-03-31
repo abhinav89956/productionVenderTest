@@ -1,0 +1,64 @@
+/* Card styling */
+.card {
+  border-radius: 16px;
+}
+
+/* Table Scroll Container */
+.table-scroll {
+  max-height: 700px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+/* Sticky header */
+.sticky-header th {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 2;
+}
+
+/* Make table cells vertically aligned and compact */
+.table th,
+.table td {
+  vertical-align: top;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+/* Response preview box */
+.response-preview {
+  max-height: 4.5em;
+  max-width: 1200px;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 4px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+/* Compact table font */
+.table {
+  font-size: 0.85rem;
+}
+
+/* Custom scrollbar */
+.table-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}

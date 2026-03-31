@@ -1,0 +1,50 @@
+<div class="container mt-3">
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="text-center my-3">
+    <div class="spinner-border text-primary"></div>
+  </div>
+
+  <!-- No Data -->
+  <div *ngIf="!loading && logs.length === 0" class="alert alert-warning text-center">
+    No Logs Found
+  </div>
+
+  <!-- Logs Table -->
+  <div class="table-scroll" *ngIf="logs.length > 0">
+    <table class="table table-bordered table-sm">
+      <thead class="table-light sticky-header">
+        <tr>
+          <th>Controller</th>
+          <th>Action</th>
+          <th>Method</th>
+          <th>Request URL</th>
+          <th>Request Body</th>
+          <th>Response Body</th>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let log of logs; let i = index">
+          <td>{{ log.controllerName }}</td>
+          <td>{{ log.actionName }}</td>
+          <td>{{ log.httpMethod }}</td>
+          <td>{{ log.requestUrl }}</td>
+          <td>{{ log.requestBody }}</td>
+
+          <td>
+            <div class="response-preview">
+              {{ log.responseBody }}
+            </div>
+          </td>
+
+          <td>{{ log.statusCode }}</td>
+          <td>{{ log.message }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

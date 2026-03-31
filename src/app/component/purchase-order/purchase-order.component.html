@@ -1,0 +1,83 @@
+<div class="container mt-3">
+
+  <h4 class="mb-3">Purchase Order</h4>
+
+  <!-- Reactive Form -->
+  <form [formGroup]="purchaseForm" class="row g-3">
+
+    <div class="col-md-3 d-flex align-items-end">
+      <button type="button" class="btn btn-primary me-2" (click)="syncOrders()">
+        Sync Order
+      </button>
+    </div>
+
+  </form>
+
+  <hr>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="text-center my-3">
+    <div class="spinner-border text-primary"></div>
+  </div>
+
+  <!-- Table -->
+  <div *ngIf="orders.length > 0">
+
+    <h5>Order Details</h5>
+
+    <table class="table table-bordered table-striped mt-2">
+
+      <thead class="table-dark">
+        <tr>
+          <th>Order Date</th>
+          <th>Order Number</th>
+          <th>Order Site</th>
+          <!-- <th>Currency</th> -->
+          <th>Vendor</th>
+          <th>Status</th>
+          <th>Amount</th>
+          <th>Inserted Date</th>
+          <th>Updated Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let order of orders">
+
+          <td>{{ order.orddat | date:'dd-MM-yyyy' }}</td>
+
+          <td>{{ order.pohnum }}</td>
+
+          <td>{{ order.pohfcy }}</td>
+
+          <!-- <td>{{ order.cur_REF }}</td> -->
+
+          <td>{{ order.bpsnum }}</td>
+
+          <td>
+            <span class="badge bg-primary">
+              {{ order.rcpflg_ID }}
+            </span>
+          </td>
+
+          <td>{{ order.totord }}</td>
+
+          <td>{{ order.credattim | date:'dd-MM-yyyy HH:mm' }}</td>
+
+          <td>{{ order.upddattim | date:'dd-MM-yyyy HH:mm' }}</td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <!-- No Data -->
+  <div *ngIf="!loading && orders.length === 0" class="alert alert-warning mt-3">
+    No Purchase Orders Found
+  </div>
+
+</div>

@@ -36,10 +36,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+         "styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/ngx-toastr/toastr.css",
+  "node_modules/@ctrl/ngx-emoji-mart/picker.css",
+  "src/styles.scss"
+],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -97,12 +102,18 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c35afcb6-bc2b-4573-932d-bfaa37997bf0"
   }
 }
