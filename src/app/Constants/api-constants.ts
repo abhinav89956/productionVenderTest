@@ -55,18 +55,9 @@ export class ItemApi {
 }
 
 
-export class LogdApi {
-  static baseUrl = environment.apiUrl + '/ApiLog';
-  static getLogs() {
-    return `${LogdApi.baseUrl}/GetLogs`;
-  }
-}
-export class PurchseApi {
-  static baseUrl = environment.apiUrl + '/PurchaseOrder';
-  static GetPurchase = PurchseApi.baseUrl + '/sync';
-  static Getorders = PurchseApi.baseUrl + '/orders';
 
-}
+
+
 
 export class ChatApi {
 
@@ -91,5 +82,5 @@ export class ChatApi {
     `${ChatApi.baseUrl}/GetNotifications?userId=${userId}`;
 
 
-static hubUrl = 'https://localhost:44396'.replace(/\/$/, '') + '/chathub';
+static hubUrl = 'http://localhost:5240'.replace(/\/$/, '') + '/chathub';
 }

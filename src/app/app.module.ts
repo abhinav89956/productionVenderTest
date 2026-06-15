@@ -20,9 +20,7 @@ import { VenderComponent } from './component/vender/vender.component';
 import { BarcodeComponent } from './component/barcode/barcode.component';
 import { BarcodeListComponent } from './component/barcode-list/barcode-list.component';
 import { SettingsComponent } from './component/settings/settings.component';
-import { PurchaseOrderComponent } from './component/purchase-order/purchase-order.component';
-import { LogComponent } from './component/log/log.component';
-import { InviteComponent } from './component/invite/invite.component';
+
 import { ChatComponent } from './component/chat/chat.component';
 
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
@@ -41,9 +39,7 @@ import { QuillModule } from 'ngx-quill';
     BarcodeComponent,
     BarcodeListComponent,
     SettingsComponent,
-    PurchaseOrderComponent,
-    LogComponent,
-    InviteComponent,
+
     ChatComponent,
   ],
   imports: [

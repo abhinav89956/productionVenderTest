@@ -1,10 +1,6 @@
 <div class="sidebar" *ngIf="showSidebar">
 
-  <!-- Logo -->
-  <div class="logo text-center py-3">
-    <img src="assets/dynarex-logo.png" alt="Dynarex Logo" class="logo-img"/>
-  </div>
-
+ 
   <!-- Profile -->
   <div class="profile-section text-center">
     <div class="profile-icon-container">
@@ -71,12 +67,7 @@
       </ul>
     </li>
 
-    <!-- Purchase Order -->
-    <li *ngIf="isAdmin">
-      <a routerLink="/purchase-order" routerLinkActive="active">
-        <i class="bi bi-receipt"></i> Purchase Order
-      </a>
-    </li>
+  
 <li>
 
   <a href="javascript:void(0)"
@@ -95,14 +86,7 @@
 
   <ul *ngIf="chatMenuOpen" class="submenu list-unstyled">
 
-    <!-- Contact Book -->
-    <!-- <li>
-      <a routerLink="/contacts" routerLinkActive="active">
-        <i class="bi bi-person-lines-fill"></i> Contacts
-      </a>
-    </li> -->
-
-    <!-- Chat Window -->
+  
     <li>
       <a routerLink="/chat" routerLinkActive="active">
         <i class="bi bi-chat-left-text"></i> Chat Window
@@ -138,11 +122,7 @@
         </li>
 
         
-        <li *ngIf="isAdmin">
-          <a routerLink="/logapi" routerLinkActive="active">
-            Event Log
-          </a>
-        </li>
+       
 
       </ul>
     </li>

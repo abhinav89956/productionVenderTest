@@ -10,9 +10,7 @@ import { VenderComponent } from './component/vender/vender.component';
 import { BarcodeComponent } from './component/barcode/barcode.component';
 import { BarcodeListComponent } from './component/barcode-list/barcode-list.component';
 import { SettingsComponent } from './component/settings/settings.component';
-import { PurchaseOrderComponent } from './component/purchase-order/purchase-order.component';
-import { LogComponent } from './component/log/log.component';
-import { InviteComponent } from './component/invite/invite.component';
+
 
 import { ChatComponent } from './component/chat/chat.component';
 
@@ -27,9 +25,6 @@ const routes: Routes = [
 { path: 'barcode', component: BarcodeComponent, canActivate: [AuthGuard] },
 { path: 'barcodelist', component: BarcodeListComponent, canActivate: [AuthGuard] },
 { path: 'setting', component: SettingsComponent, canActivate: [AuthGuard] },
-{ path: 'purchase-order', component: PurchaseOrderComponent, canActivate: [AuthGuard] },
-{ path: 'logapi', component: LogComponent, canActivate: [AuthGuard] },
-{ path: 'invite', component: InviteComponent},
 { path: 'chat', component: ChatComponent, canActivate: [AuthGuard] },
 
 
